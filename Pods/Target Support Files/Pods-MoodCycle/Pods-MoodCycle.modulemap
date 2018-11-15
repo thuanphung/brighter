@@ -1,0 +1,6 @@
+framework module Pods_MoodCycle {
+  umbrella header "Pods-MoodCycle-umbrella.h"
+
+  export *
+  module * { export * }
+}

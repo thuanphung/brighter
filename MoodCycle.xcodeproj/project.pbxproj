@@ -7,21 +7,84 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7354408C2198D18A00F43ADA /* SavedEntryThankYouViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7354408B2198D18A00F43ADA /* SavedEntryThankYouViewController.swift */; };
+		7354408F2198D6E000F43ADA /* moodCyclyJournalEntries.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7354408D2198D6E000F43ADA /* moodCyclyJournalEntries.xcdatamodeld */; };
+		735741C921996CD0000773A8 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 735741C821996CD0000773A8 /* LogInViewController.swift */; };
+		735741CB219A1ACA000773A8 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 735741CA219A1ACA000773A8 /* SignUpViewController.swift */; };
+		738418D82193E120005DDA59 /* AskForTodayMoodCViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 738418D72193E120005DDA59 /* AskForTodayMoodCViewController.swift */; };
+		738418DA2193E1A2005DDA59 /* DiaryEntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 738418D92193E1A2005DDA59 /* DiaryEntryViewController.swift */; };
+		738418DC2193E342005DDA59 /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 738418DB2193E342005DDA59 /* CalendarViewController.swift */; };
+		738418DE2193E353005DDA59 /* StatsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 738418DD2193E353005DDA59 /* StatsViewController.swift */; };
+		738418E02193E3AD005DDA59 /* MainPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 738418DF2193E3AD005DDA59 /* MainPageViewController.swift */; };
 		738B74BE218E260E007DE734 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 738B74BD218E260E007DE734 /* AppDelegate.swift */; };
-		738B74C0218E260E007DE734 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 738B74BF218E260E007DE734 /* ViewController.swift */; };
 		738B74C3218E260E007DE734 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 738B74C1218E260E007DE734 /* Main.storyboard */; };
 		738B74C5218E2612007DE734 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 738B74C4218E2612007DE734 /* Assets.xcassets */; };
 		738B74C8218E2612007DE734 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 738B74C6218E2612007DE734 /* LaunchScreen.storyboard */; };
+		73A513F3219B471E004D3149 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 73A513F2219B471E004D3149 /* GoogleService-Info.plist */; };
+		73DF0657219D1A39003BA595 /* Charts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73DF0654219D1A2D003BA595 /* Charts.framework */; };
+		73DF0658219D1A39003BA595 /* Charts.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 73DF0654219D1A2D003BA595 /* Charts.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		A019B08A4C3E2AC047000F6B /* Pods_MoodCycle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56D31EAF25CB74620FFEA9BA /* Pods_MoodCycle.framework */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		73DF0653219D1A2D003BA595 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 73DF064E219D1A2D003BA595 /* Charts.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 65AD9E95D9ED4DC0BD73A743;
+			remoteInfo = Charts;
+		};
+		73DF0655219D1A2D003BA595 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 73DF064E219D1A2D003BA595 /* Charts.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 1CBBC58C6CE1EBEE9852CE41;
+			remoteInfo = ChartsTests;
+		};
+		73DF0659219D1A39003BA595 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 73DF064E219D1A2D003BA595 /* Charts.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = A58A4ED274A941CA248EA921;
+			remoteInfo = Charts;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		73DF065B219D1A3A003BA595 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				73DF0658219D1A39003BA595 /* Charts.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		56D31EAF25CB74620FFEA9BA /* Pods_MoodCycle.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MoodCycle.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5A9D7968E034442204EB16EB /* Pods-MoodCycle.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MoodCycle.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MoodCycle/Pods-MoodCycle.debug.xcconfig"; sourceTree = "<group>"; };
+		7334D9AF219D16240098BC4B /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7354408B2198D18A00F43ADA /* SavedEntryThankYouViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedEntryThankYouViewController.swift; sourceTree = "<group>"; };
+		7354408E2198D6E000F43ADA /* moodCyclyJournalEntries.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = moodCyclyJournalEntries.xcdatamodel; sourceTree = "<group>"; };
+		735741C821996CD0000773A8 /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
+		735741CA219A1ACA000773A8 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		738418D72193E120005DDA59 /* AskForTodayMoodCViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AskForTodayMoodCViewController.swift; sourceTree = "<group>"; };
+		738418D92193E1A2005DDA59 /* DiaryEntryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryEntryViewController.swift; sourceTree = "<group>"; };
+		738418DB2193E342005DDA59 /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
+		738418DD2193E353005DDA59 /* StatsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsViewController.swift; sourceTree = "<group>"; };
+		738418DF2193E3AD005DDA59 /* MainPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPageViewController.swift; sourceTree = "<group>"; };
 		738B74BA218E260E007DE734 /* MoodCycle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MoodCycle.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		738B74BD218E260E007DE734 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		738B74BF218E260E007DE734 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		738B74C2218E260E007DE734 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		738B74C4218E2612007DE734 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		738B74C7218E2612007DE734 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		738B74C9218E2612007DE734 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		73A513F2219B471E004D3149 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		73DF064E219D1A2D003BA595 /* Charts.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Charts.xcodeproj; path = ../Charts/Charts.xcodeproj; sourceTree = "<group>"; };
+		96BB70EA27E5E86BD968A2D4 /* Pods-MoodCycle.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MoodCycle.release.xcconfig"; path = "Pods/Target Support Files/Pods-MoodCycle/Pods-MoodCycle.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +92,55 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A019B08A4C3E2AC047000F6B /* Pods_MoodCycle.framework in Frameworks */,
+				73DF0657219D1A39003BA595 /* Charts.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5907D3BCF965204536AD7430 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5A9D7968E034442204EB16EB /* Pods-MoodCycle.debug.xcconfig */,
+				96BB70EA27E5E86BD968A2D4 /* Pods-MoodCycle.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		735741CE219A3F5B000773A8 /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				735741CA219A1ACA000773A8 /* SignUpViewController.swift */,
+				735741C821996CD0000773A8 /* LogInViewController.swift */,
+			);
+			path = Authentication;
+			sourceTree = "<group>";
+		};
+		738418D62193E0CA005DDA59 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				738418D72193E120005DDA59 /* AskForTodayMoodCViewController.swift */,
+				735741CE219A3F5B000773A8 /* Authentication */,
+				7354408B2198D18A00F43ADA /* SavedEntryThankYouViewController.swift */,
+				738418DB2193E342005DDA59 /* CalendarViewController.swift */,
+				738418DF2193E3AD005DDA59 /* MainPageViewController.swift */,
+				738418DD2193E353005DDA59 /* StatsViewController.swift */,
+				738418D92193E1A2005DDA59 /* DiaryEntryViewController.swift */,
+			);
+			name = "View Controllers";
+			path = "New Group";
+			sourceTree = "<group>";
+		};
 		738B74B1218E260E007DE734 = {
 			isa = PBXGroup;
 			children = (
+				73DF064E219D1A2D003BA595 /* Charts.xcodeproj */,
 				738B74BC218E260E007DE734 /* MoodCycle */,
 				738B74BB218E260E007DE734 /* Products */,
+				5907D3BCF965204536AD7430 /* Pods */,
+				8A0B2D80C182953BDC8A28FD /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,14 +155,33 @@
 		738B74BC218E260E007DE734 /* MoodCycle */ = {
 			isa = PBXGroup;
 			children = (
+				7334D9AF219D16240098BC4B /* Info.plist */,
+				73A513F2219B471E004D3149 /* GoogleService-Info.plist */,
 				738B74BD218E260E007DE734 /* AppDelegate.swift */,
-				738B74BF218E260E007DE734 /* ViewController.swift */,
+				738418D62193E0CA005DDA59 /* View Controllers */,
 				738B74C1218E260E007DE734 /* Main.storyboard */,
+				7354408D2198D6E000F43ADA /* moodCyclyJournalEntries.xcdatamodeld */,
 				738B74C4218E2612007DE734 /* Assets.xcassets */,
 				738B74C6218E2612007DE734 /* LaunchScreen.storyboard */,
-				738B74C9218E2612007DE734 /* Info.plist */,
 			);
 			path = MoodCycle;
+			sourceTree = "<group>";
+		};
+		73DF064F219D1A2D003BA595 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				73DF0654219D1A2D003BA595 /* Charts.framework */,
+				73DF0656219D1A2D003BA595 /* ChartsTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8A0B2D80C182953BDC8A28FD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				56D31EAF25CB74620FFEA9BA /* Pods_MoodCycle.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,13 +191,17 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 738B74CC218E2612007DE734 /* Build configuration list for PBXNativeTarget "MoodCycle" */;
 			buildPhases = (
+				B15716BECFAD9B545D423FF2 /* [CP] Check Pods Manifest.lock */,
 				738B74B6218E260E007DE734 /* Sources */,
 				738B74B7218E260E007DE734 /* Frameworks */,
 				738B74B8218E260E007DE734 /* Resources */,
+				810C01DD05920FBD4101F18B /* [CP] Embed Pods Frameworks */,
+				73DF065B219D1A3A003BA595 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				73DF065A219D1A39003BA595 /* PBXTargetDependency */,
 			);
 			name = MoodCycle;
 			productName = MoodCycle;
@@ -110,6 +234,12 @@
 			mainGroup = 738B74B1218E260E007DE734;
 			productRefGroup = 738B74BB218E260E007DE734 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 73DF064F219D1A2D003BA595 /* Products */;
+					ProjectRef = 73DF064E219D1A2D003BA595 /* Charts.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				738B74B9218E260E007DE734 /* MoodCycle */,
@@ -117,11 +247,29 @@
 		};
 /* End PBXProject section */
 
+/* Begin PBXReferenceProxy section */
+		73DF0654219D1A2D003BA595 /* Charts.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Charts.framework;
+			remoteRef = 73DF0653219D1A2D003BA595 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		73DF0656219D1A2D003BA595 /* ChartsTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = ChartsTests.xctest;
+			remoteRef = 73DF0655219D1A2D003BA595 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
 /* Begin PBXResourcesBuildPhase section */
 		738B74B8218E260E007DE734 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				73A513F3219B471E004D3149 /* GoogleService-Info.plist in Resources */,
 				738B74C8218E2612007DE734 /* LaunchScreen.storyboard in Resources */,
 				738B74C5218E2612007DE734 /* Assets.xcassets in Resources */,
 				738B74C3218E260E007DE734 /* Main.storyboard in Resources */,
@@ -130,17 +278,78 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		810C01DD05920FBD4101F18B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-MoodCycle/Pods-MoodCycle-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MoodCycle/Pods-MoodCycle-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B15716BECFAD9B545D423FF2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MoodCycle-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		738B74B6218E260E007DE734 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				738B74C0218E260E007DE734 /* ViewController.swift in Sources */,
+				735741CB219A1ACA000773A8 /* SignUpViewController.swift in Sources */,
+				7354408C2198D18A00F43ADA /* SavedEntryThankYouViewController.swift in Sources */,
+				738418DC2193E342005DDA59 /* CalendarViewController.swift in Sources */,
+				738418E02193E3AD005DDA59 /* MainPageViewController.swift in Sources */,
+				738418D82193E120005DDA59 /* AskForTodayMoodCViewController.swift in Sources */,
 				738B74BE218E260E007DE734 /* AppDelegate.swift in Sources */,
+				738418DE2193E353005DDA59 /* StatsViewController.swift in Sources */,
+				738418DA2193E1A2005DDA59 /* DiaryEntryViewController.swift in Sources */,
+				735741C921996CD0000773A8 /* LogInViewController.swift in Sources */,
+				7354408F2198D6E000F43ADA /* moodCyclyJournalEntries.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		73DF065A219D1A39003BA595 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Charts;
+			targetProxy = 73DF0659219D1A39003BA595 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		738B74C1218E260E007DE734 /* Main.storyboard */ = {
@@ -280,7 +489,9 @@
 		};
 		738B74CD218E2612007DE734 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5A9D7968E034442204EB16EB /* Pods-MoodCycle.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = B4UY9LNNAU;
@@ -289,7 +500,8 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.thuanphung.MoodCycle;
+				PRODUCT_BUNDLE_IDENTIFIER = com.thuanphung.MoodCycle1;
+				PRODUCT_MODULE_NAME = "$(PRODUCT_NAME:c99extidentifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -298,7 +510,9 @@
 		};
 		738B74CE218E2612007DE734 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 96BB70EA27E5E86BD968A2D4 /* Pods-MoodCycle.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = B4UY9LNNAU;
@@ -307,7 +521,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.thuanphung.MoodCycle;
+				PRODUCT_BUNDLE_IDENTIFIER = com.thuanphung.MoodCycle1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -336,6 +550,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		7354408D2198D6E000F43ADA /* moodCyclyJournalEntries.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				7354408E2198D6E000F43ADA /* moodCyclyJournalEntries.xcdatamodel */,
+			);
+			currentVersion = 7354408E2198D6E000F43ADA /* moodCyclyJournalEntries.xcdatamodel */;
+			path = moodCyclyJournalEntries.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 738B74B2218E260E007DE734 /* Project object */;
 }
