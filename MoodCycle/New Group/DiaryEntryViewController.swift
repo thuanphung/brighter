@@ -14,7 +14,9 @@ class DiaryEntryViewController: UIViewController, UITextViewDelegate {
     @IBOutlet weak var entry: UITextView!
     
     func textViewDidBeginEditing(_ textView: UITextView) {
-        textView.text = ""
+        if textView.text == "Begin Typing Here" {
+            textView.text = ""
+        }
     }
     
 
@@ -24,7 +26,7 @@ class DiaryEntryViewController: UIViewController, UITextViewDelegate {
         self.entry.delegate = self
         let date = Date()
         let formatter = DateFormatter()
-        formatter.dateFormat = "dd/MM/yyyy"
+        formatter.dateFormat = "MM/dd/yyyy"
         let result = formatter.string(from: date)
         dateLabel2.text = result
         

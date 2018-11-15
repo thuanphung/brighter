@@ -46,13 +46,13 @@
                                 <rect key="frame" x="0.0" y="123" width="375" height="439"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Energy Level" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SC6-Ow-7J1">
-                                        <rect key="frame" x="138" y="0.0" width="99" height="15"/>
+                                        <rect key="frame" x="138" y="0.0" width="99" height="24.5"/>
                                         <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="17"/>
                                         <color key="textColor" red="0.37055522200000002" green="0.37056469920000001" blue="0.37055957319999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <color key="highlightedColor" cocoaTouchSystemColor="darkTextColor"/>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aSU-jB-6N3">
-                                        <rect key="frame" x="30" y="15" width="315" height="125"/>
+                                        <rect key="frame" x="30" y="24.5" width="315" height="125"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sleepy icon" translatesAutoresizingMaskIntoConstraints="NO" id="kWc-QK-LNC">
                                                 <rect key="frame" x="0.0" y="0.0" width="70" height="125"/>
@@ -74,7 +74,7 @@
                                         </constraints>
                                     </stackView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Stress Level" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NB5-jJ-X9Z">
-                                        <rect key="frame" x="140" y="140" width="95" height="24.5"/>
+                                        <rect key="frame" x="140" y="149.5" width="95" height="15"/>
                                         <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="17"/>
                                         <color key="textColor" red="0.37055522200000002" green="0.37056469920000001" blue="0.37055957319999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
@@ -493,19 +493,32 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" text="Begin Typing Entry" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="N36-XB-Xzr">
-                                <rect key="frame" x="29" y="125" width="315" height="469"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Begin Typing Here" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="N36-XB-Xzr">
+                                <rect key="frame" x="37.5" y="143" width="300" height="381"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QQC-VJ-bMz">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="Title" id="MxY-IL-wIg">
+                                        <barButtonItem key="rightBarButtonItem" title="Item" id="yJX-ac-WCk"/>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="N36-XB-Xzr" firstAttribute="centerX" secondItem="IYr-N1-PbI" secondAttribute="centerX" id="W6M-fl-fyT"/>
-                            <constraint firstItem="N36-XB-Xzr" firstAttribute="centerY" secondItem="IYr-N1-PbI" secondAttribute="centerY" id="tNg-Lc-URO"/>
+                            <constraint firstItem="N36-XB-Xzr" firstAttribute="height" secondItem="IYr-N1-PbI" secondAttribute="height" multiplier="4/7" id="5ps-yE-UkP"/>
+                            <constraint firstItem="N36-XB-Xzr" firstAttribute="centerY" secondItem="IYr-N1-PbI" secondAttribute="centerY" id="7aa-3h-LWS"/>
+                            <constraint firstItem="N36-XB-Xzr" firstAttribute="centerX" secondItem="IYr-N1-PbI" secondAttribute="centerX" id="sDg-gC-Uih"/>
+                            <constraint firstItem="N36-XB-Xzr" firstAttribute="width" secondItem="IYr-N1-PbI" secondAttribute="width" multiplier="4/5" id="yii-Ye-zHv"/>
                         </constraints>
                     </view>
+                    <toolbarItems/>
+                    <nil key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="dateLabel2" destination="cRm-4P-lvM" id="Y8K-6f-gBq"/>
                         <outlet property="entry" destination="N36-XB-Xzr" id="nkS-to-JIi"/>
@@ -650,6 +663,7 @@
         <image name="statistics" width="51.200000762939453" height="51.200000762939453"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="rVF-0E-Dfa"/>
         <segue reference="m0p-pn-KeI"/>
     </inferredMetricsTieBreakers>
 </document>
