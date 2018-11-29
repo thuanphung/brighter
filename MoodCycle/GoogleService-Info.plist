@@ -7,9 +7,9 @@
 	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
 	<string>ca-app-pub-3940256099942544/4411468910</string>
 	<key>CLIENT_ID</key>
-	<string>1067407610054-m50f7jc28oo4u83006mve23nblrikadj.apps.googleusercontent.com</string>
+	<string>1067407610054-k4ulr8fdmov4gi12937vn8fb87nk7f37.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.1067407610054-m50f7jc28oo4u83006mve23nblrikadj</string>
+	<string>com.googleusercontent.apps.1067407610054-k4ulr8fdmov4gi12937vn8fb87nk7f37</string>
 	<key>API_KEY</key>
 	<string>AIzaSyA3xL2C4iPeO4AvyVRNCneCHxi8R5ZYjvQ</string>
 	<key>GCM_SENDER_ID</key>
@@ -17,7 +17,7 @@
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>com.thuanphung.MoodCycle1</string>
+	<string>com.thuanphung.MoodCycle2</string>
 	<key>PROJECT_ID</key>
 	<string>mood-cycle</string>
 	<key>STORAGE_BUCKET</key>
@@ -33,7 +33,7 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:1067407610054:ios:15ff39be36fb4fa1</string>
+	<string>1:1067407610054:ios:98446349fe14d850</string>
 	<key>DATABASE_URL</key>
 	<string>https://mood-cycle.firebaseio.com</string>
 </dict>

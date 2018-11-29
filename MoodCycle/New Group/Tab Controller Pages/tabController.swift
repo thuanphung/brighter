@@ -1,19 +1,18 @@
 //
-//  StatsViewController.swift
+//  tabController.swift
 //  MoodCycle
 //
-//  Created by Thuan Phung on 11/7/18.
+//  Created by Thuan Phung on 11/18/18.
 //  Copyright © 2018 Thuan Phung. All rights reserved.
 //
 
 import UIKit
-import Charts
 
-class StatsViewController: UIViewController {
+class tabController: UITabBarController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.selectedIndex = 0
         // Do any additional setup after loading the view.
     }
     

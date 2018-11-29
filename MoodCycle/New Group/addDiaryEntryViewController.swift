@@ -7,15 +7,47 @@
 //
 
 import UIKit
+import FirebaseAuth
+import FirebaseDatabase
 
-class DiaryEntryViewController: UIViewController, UITextViewDelegate {
+class DiaryEntryViewController: UIViewController, UITextViewDelegate, UITextFieldDelegate {
+    var currentDateNode: DatabaseReference?
+    var diaryEntry = ""
+    var currentUserRef: User?
+    var result: String = ""
 
-    @IBOutlet weak var dateLabel2: UILabel!
+    @IBOutlet weak var titleOfEntry: UITextField!
+    @IBAction func backButtonPressed(_ sender: Any) {
+         dismiss(animated: true, completion: nil)
+    
+    }
+    @IBOutlet weak var diaryNavBar: UINavigationBar!
+
+    @IBAction func saveButtonPressed(_ sender: Any) {
+        diaryEntry = entry.text
+        var fullEntry = [String: String]()
+        fullEntry["Date"] = result
+        fullEntry["Entry"] = diaryEntry
+        if titleOfEntry.text != "Title of Entry" {
+            fullEntry["Title"] = titleOfEntry.text
+        }
+        currentUserRef?.lastEntryRef!.child("Notes").setValue(fullEntry)
+        performSegue(withIdentifier: "savedEntryToMain", sender: self)
+    }
+    
+
+  
     @IBOutlet weak var entry: UITextView!
     
     func textViewDidBeginEditing(_ textView: UITextView) {
         if textView.text == "Begin Typing Here" {
             textView.text = ""
+        }
+    }
+    
+    func textViewDidEndEditing(_ textView: UITextView) {
+        if textView.text != nil {
+            diaryEntry = textView.text
         }
     }
     
@@ -27,10 +59,10 @@ class DiaryEntryViewController: UIViewController, UITextViewDelegate {
         let date = Date()
         let formatter = DateFormatter()
         formatter.dateFormat = "MM/dd/yyyy"
-        let result = formatter.string(from: date)
-        dateLabel2.text = result
-        
-//        NotificationCenter.default.addObserver(self, selector: #selector(22(notifcation:)), name: Notification.Name.UIKeyBoardWillChangeFrame, object: nil)
+        result = formatter.string(from: date)
+        diaryNavBar.topItem?.title = result
+        titleOfEntry.delegate = self
+
         // Do any additional setup after loading the view.
     }
     

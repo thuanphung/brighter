@@ -1,14 +1,14 @@
 //
-//  MainPageViewController.swift
+//  viewEntryViewController.swift
 //  MoodCycle
 //
-//  Created by Thuan Phung on 11/7/18.
+//  Created by Thuan Phung on 11/26/18.
 //  Copyright © 2018 Thuan Phung. All rights reserved.
 //
 
 import UIKit
 
-class MainPageViewController: UIViewController {
+class viewEntryViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
