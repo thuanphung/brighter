@@ -51,6 +51,7 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
                         }
                     }
                     self.dbRef.child("Users").child((Auth.auth().currentUser?.uid)!).child("Account Info").setValue(["Name": self.userFirstName + self.userLastName, "Email": self.userEmail, "Password": self.userPassword])
+                    self.dbRef.child("Users").child((Auth.auth().currentUser?.uid)!).child("Streak").setValue(0)
                     let alert = UIAlertController(title: "Account Successfully Created", message: "Thank you for signing up!", preferredStyle: .alert)
                     alert.addAction(UIAlertAction(title: "Continue", style: .default, handler: {
                         (action: UIAlertAction) in

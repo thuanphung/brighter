@@ -1,47 +1,47 @@
 //
-//  DiaryEntryViewController.swift
+//  editEntryViewController.swift
 //  MoodCycle
 //
-//  Created by Thuan Phung on 11/7/18.
+//  Created by Thuan Phung on 11/29/18.
 //  Copyright © 2018 Thuan Phung. All rights reserved.
 //
 
 import UIKit
-import FirebaseAuth
 import FirebaseDatabase
+import FirebaseAuth
 
-class addDiaryEntryViewController: UIViewController, UITextViewDelegate, UITextFieldDelegate {
-    var currentDateNode: DatabaseReference?
+class editEntryViewController: UIViewController, UITextViewDelegate, UITextFieldDelegate {
+    var entry: diaryEntry?
+    
     var diaryEntryBody = ""
     var currentUserRef: User?
     var result: String = ""
-
+    
     @IBOutlet weak var titleOfEntry: UITextField!
     @IBAction func backButtonPressed(_ sender: Any) {
-         dismiss(animated: true, completion: nil)
-    
+//        performSegue(withIdentifier: "T##String", sender: <#T##Any?#>)
     }
     @IBOutlet weak var diaryNavBar: UINavigationBar!
-
+    
     @IBAction func saveButtonPressed(_ sender: Any) {
-        diaryEntryBody = entry.text
+        diaryEntryBody = entryBody.text
         var fullEntry = [String: String]()
-        fullEntry["Date"] = result
+        fullEntry["Date"] = entry!.date
         fullEntry["Body"] = diaryEntryBody
-        fullEntry["dbRef"] = "\(currentUserRef!.lastEntryRef!)"
+        fullEntry["dbRef"] = entry!.dbRef
         if titleOfEntry.text != "Title of Entry" {
             fullEntry["Title"] = titleOfEntry.text
-        } else {
-            fullEntry["Title"] = ""
         }
-        currentUserRef?.lastEntryRef!.child("Notes").setValue(fullEntry)
+        let oldRef = Database.database().reference(fromURL: (entry?.dbRef)!) 
+        oldRef.child("Notes").setValue(fullEntry)
         
-        performSegue(withIdentifier: "savedEntryToMain", sender: self)
+        
+        self.dismiss(animated: true, completion: nil)
     }
     
-
-  
-    @IBOutlet weak var entry: UITextView!
+    
+    
+    @IBOutlet weak var entryBody: UITextView!
     
     func textViewDidBeginEditing(_ textView: UITextView) {
         if textView.text == "Begin Typing Here" {
@@ -57,24 +57,22 @@ class addDiaryEntryViewController: UIViewController, UITextViewDelegate, UITextF
     
     func textFieldDidBeginEditing(_ textField: UITextField) {
         if textField.text == "Title of Entry" {
-             textField.text = ""
+            textField.text = ""
         }
     }
-
     
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.entry.delegate = self
+        self.entryBody.delegate = self
         titleOfEntry.delegate = self
         
-        let date = Date()
-        let formatter = DateFormatter()
-        formatter.dateFormat = "MM/dd/yyyy"
 
-        result = formatter.string(from: date)
-        diaryNavBar.topItem?.title = result
+        diaryNavBar.topItem?.title = entry!.date
+        entryBody.text = entry?.body
+        titleOfEntry.text = entry?.title
         
-
+        
         // Do any additional setup after loading the view.
     }
     
@@ -89,14 +87,15 @@ class addDiaryEntryViewController: UIViewController, UITextViewDelegate, UITextF
         let keyboardEndFrame = self.view.convert(keyboardEndFrameScreenCoordinates, to: view.window)
         
         if notification.name == UIResponder.keyboardWillHideNotification {
-            entry.contentInset = UIEdgeInsets.zero
+            entryBody.contentInset = UIEdgeInsets.zero
         } else {
-            entry.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: keyboardEndFrameScreenCoordinates.height, right: 0)
-            entry.scrollIndicatorInsets = entry.contentInset
+            entryBody.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: keyboardEndFrameScreenCoordinates.height, right: 0)
+            entryBody.scrollIndicatorInsets = entryBody.contentInset
         }
         
-        entry.scrollRangeToVisible(entry.selectedRange)
+        entryBody.scrollRangeToVisible(entryBody.selectedRange)
     }
+    
     
     
 

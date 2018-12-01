@@ -7,3 +7,14 @@
 //
 
 import Foundation
+import UIKit
+import FirebaseDatabase
+
+class User {
+    var userEntries: Int?
+    
+    var lastEntryRef: DatabaseReference?
+    
+
+    
+}

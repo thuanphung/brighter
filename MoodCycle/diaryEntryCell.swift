@@ -1,5 +1,5 @@
 //
-//  diaryEntry.swift
+//  diaryEntryCell.swift
 //  MoodCycle
 //
 //  Created by Thuan Phung on 11/22/18.
@@ -8,7 +8,8 @@
 
 import UIKit
 
-class diaryEntry: UITableViewCell {
+class diaryEntryCell: UITableViewCell {
+    var myEntry: diaryEntry?
 
     @IBOutlet weak var entryTitle: UILabel!
     @IBOutlet weak var dateLabel: UILabel!
@@ -21,8 +22,16 @@ class diaryEntry: UITableViewCell {
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
         // Configure the view for the selected state
+    }
+    
+    func setDiaryEntryCell(entry: diaryEntry) {
+        myEntry = entry
+        entryTitle.text = entry.title
+//        let start = entry.time.index(entry.time.startIndex, offsetBy: 5)
+//        let end = entry.time.index(entry.time.endIndex, offsetBy: 0)
+//        let range = start..<end
+        dateLabel.text = entry.date + " - " + entry.time
     }
 
 }

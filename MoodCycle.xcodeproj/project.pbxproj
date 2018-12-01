@@ -7,20 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7309C996219FE4CD00EA3D91 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7309C995219FE4CC00EA3D91 /* GoogleService-Info.plist */; };
+		730B192221A2897A00505422 /* tabController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 730B192121A2897A00505422 /* tabController.swift */; };
+		730EE2A221A7528A0077C414 /* diaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 730EE2A121A7528A0077C414 /* diaryViewController.swift */; };
+		730EE2A421A754C60077C414 /* diaryEntryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 730EE2A321A754C60077C414 /* diaryEntryCell.swift */; };
+		730EE2A821A8BC550077C414 /* diaryEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 730EE2A721A8BC550077C414 /* diaryEntry.swift */; };
 		7354408C2198D18A00F43ADA /* SavedEntryThankYouViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7354408B2198D18A00F43ADA /* SavedEntryThankYouViewController.swift */; };
-		7354408F2198D6E000F43ADA /* moodCyclyJournalEntries.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7354408D2198D6E000F43ADA /* moodCyclyJournalEntries.xcdatamodeld */; };
 		735741C921996CD0000773A8 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 735741C821996CD0000773A8 /* LogInViewController.swift */; };
 		735741CB219A1ACA000773A8 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 735741CA219A1ACA000773A8 /* SignUpViewController.swift */; };
+		7363338821A2067000F8AD4E /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7363338721A2067000F8AD4E /* User.swift */; };
 		738418D82193E120005DDA59 /* AskForTodayMoodCViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 738418D72193E120005DDA59 /* AskForTodayMoodCViewController.swift */; };
-		738418DA2193E1A2005DDA59 /* DiaryEntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 738418D92193E1A2005DDA59 /* DiaryEntryViewController.swift */; };
-		738418DC2193E342005DDA59 /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 738418DB2193E342005DDA59 /* CalendarViewController.swift */; };
+		738418DA2193E1A2005DDA59 /* addDiaryEntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 738418D92193E1A2005DDA59 /* addDiaryEntryViewController.swift */; };
 		738418DE2193E353005DDA59 /* StatsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 738418DD2193E353005DDA59 /* StatsViewController.swift */; };
-		738418E02193E3AD005DDA59 /* MainPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 738418DF2193E3AD005DDA59 /* MainPageViewController.swift */; };
 		738B74BE218E260E007DE734 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 738B74BD218E260E007DE734 /* AppDelegate.swift */; };
 		738B74C3218E260E007DE734 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 738B74C1218E260E007DE734 /* Main.storyboard */; };
 		738B74C5218E2612007DE734 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 738B74C4218E2612007DE734 /* Assets.xcassets */; };
 		738B74C8218E2612007DE734 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 738B74C6218E2612007DE734 /* LaunchScreen.storyboard */; };
-		73A513F3219B471E004D3149 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 73A513F2219B471E004D3149 /* GoogleService-Info.plist */; };
+		738E21D8219E163500B48414 /* iOSGif.swift in Sources */ = {isa = PBXBuildFile; fileRef = 738E21D7219E163500B48414 /* iOSGif.swift */; };
+		738E21DB219E1A0500B48414 /* thank you.gif in Resources */ = {isa = PBXBuildFile; fileRef = 738E21DA219E1A0500B48414 /* thank you.gif */; };
+		73AD404321AF9B2E00A7A74B /* CustomSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73AD404221AF9B2D00A7A74B /* CustomSlider.swift */; };
+		73AD404621B026CD00A7A74B /* editEntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73AD404521B026CD00A7A74B /* editEntryViewController.swift */; };
+		73BE6DE421AC5EF1005C1F98 /* viewEntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73BE6DE321AC5EF1005C1F98 /* viewEntryViewController.swift */; };
 		73DF0657219D1A39003BA595 /* Charts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73DF0654219D1A2D003BA595 /* Charts.framework */; };
 		73DF0658219D1A39003BA595 /* Charts.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 73DF0654219D1A2D003BA595 /* Charts.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		A019B08A4C3E2AC047000F6B /* Pods_MoodCycle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56D31EAF25CB74620FFEA9BA /* Pods_MoodCycle.framework */; };
@@ -67,22 +74,29 @@
 /* Begin PBXFileReference section */
 		56D31EAF25CB74620FFEA9BA /* Pods_MoodCycle.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MoodCycle.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A9D7968E034442204EB16EB /* Pods-MoodCycle.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MoodCycle.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MoodCycle/Pods-MoodCycle.debug.xcconfig"; sourceTree = "<group>"; };
+		7309C995219FE4CC00EA3D91 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		730B192121A2897A00505422 /* tabController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tabController.swift; sourceTree = "<group>"; };
+		730EE2A121A7528A0077C414 /* diaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = diaryViewController.swift; sourceTree = "<group>"; };
+		730EE2A321A754C60077C414 /* diaryEntryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = diaryEntryCell.swift; sourceTree = "<group>"; };
+		730EE2A721A8BC550077C414 /* diaryEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = diaryEntry.swift; sourceTree = "<group>"; };
 		7334D9AF219D16240098BC4B /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7354408B2198D18A00F43ADA /* SavedEntryThankYouViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedEntryThankYouViewController.swift; sourceTree = "<group>"; };
-		7354408E2198D6E000F43ADA /* moodCyclyJournalEntries.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = moodCyclyJournalEntries.xcdatamodel; sourceTree = "<group>"; };
 		735741C821996CD0000773A8 /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 		735741CA219A1ACA000773A8 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		7363338721A2067000F8AD4E /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		738418D72193E120005DDA59 /* AskForTodayMoodCViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AskForTodayMoodCViewController.swift; sourceTree = "<group>"; };
-		738418D92193E1A2005DDA59 /* DiaryEntryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryEntryViewController.swift; sourceTree = "<group>"; };
-		738418DB2193E342005DDA59 /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
+		738418D92193E1A2005DDA59 /* addDiaryEntryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = addDiaryEntryViewController.swift; sourceTree = "<group>"; };
 		738418DD2193E353005DDA59 /* StatsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsViewController.swift; sourceTree = "<group>"; };
-		738418DF2193E3AD005DDA59 /* MainPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPageViewController.swift; sourceTree = "<group>"; };
 		738B74BA218E260E007DE734 /* MoodCycle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MoodCycle.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		738B74BD218E260E007DE734 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		738B74C2218E260E007DE734 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		738B74C4218E2612007DE734 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		738B74C7218E2612007DE734 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		73A513F2219B471E004D3149 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		738E21D7219E163500B48414 /* iOSGif.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOSGif.swift; sourceTree = "<group>"; };
+		738E21DA219E1A0500B48414 /* thank you.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "thank you.gif"; sourceTree = "<group>"; };
+		73AD404221AF9B2D00A7A74B /* CustomSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSlider.swift; sourceTree = "<group>"; };
+		73AD404521B026CD00A7A74B /* editEntryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = editEntryViewController.swift; sourceTree = "<group>"; };
+		73BE6DE321AC5EF1005C1F98 /* viewEntryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = viewEntryViewController.swift; sourceTree = "<group>"; };
 		73DF064E219D1A2D003BA595 /* Charts.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Charts.xcodeproj; path = ../Charts/Charts.xcodeproj; sourceTree = "<group>"; };
 		96BB70EA27E5E86BD968A2D4 /* Pods-MoodCycle.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MoodCycle.release.xcconfig"; path = "Pods/Target Support Files/Pods-MoodCycle/Pods-MoodCycle.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -121,13 +135,12 @@
 		738418D62193E0CA005DDA59 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				738418D72193E120005DDA59 /* AskForTodayMoodCViewController.swift */,
-				735741CE219A3F5B000773A8 /* Authentication */,
+				738418D92193E1A2005DDA59 /* addDiaryEntryViewController.swift */,
+				73BE6DE321AC5EF1005C1F98 /* viewEntryViewController.swift */,
+				73AD404521B026CD00A7A74B /* editEntryViewController.swift */,
 				7354408B2198D18A00F43ADA /* SavedEntryThankYouViewController.swift */,
-				738418DB2193E342005DDA59 /* CalendarViewController.swift */,
-				738418DF2193E3AD005DDA59 /* MainPageViewController.swift */,
-				738418DD2193E353005DDA59 /* StatsViewController.swift */,
-				738418D92193E1A2005DDA59 /* DiaryEntryViewController.swift */,
+				73D0A11421A5D2F200876AD3 /* Tab Controller Pages */,
+				735741CE219A3F5B000773A8 /* Authentication */,
 			);
 			name = "View Controllers";
 			path = "New Group";
@@ -155,16 +168,32 @@
 		738B74BC218E260E007DE734 /* MoodCycle */ = {
 			isa = PBXGroup;
 			children = (
-				7334D9AF219D16240098BC4B /* Info.plist */,
-				73A513F2219B471E004D3149 /* GoogleService-Info.plist */,
+				7309C995219FE4CC00EA3D91 /* GoogleService-Info.plist */,
 				738B74BD218E260E007DE734 /* AppDelegate.swift */,
+				7334D9AF219D16240098BC4B /* Info.plist */,
+				738E21D7219E163500B48414 /* iOSGif.swift */,
+				73AD404221AF9B2D00A7A74B /* CustomSlider.swift */,
+				7363338721A2067000F8AD4E /* User.swift */,
+				730EE2A721A8BC550077C414 /* diaryEntry.swift */,
+				730EE2A321A754C60077C414 /* diaryEntryCell.swift */,
 				738418D62193E0CA005DDA59 /* View Controllers */,
 				738B74C1218E260E007DE734 /* Main.storyboard */,
-				7354408D2198D6E000F43ADA /* moodCyclyJournalEntries.xcdatamodeld */,
+				738E21DA219E1A0500B48414 /* thank you.gif */,
 				738B74C4218E2612007DE734 /* Assets.xcassets */,
 				738B74C6218E2612007DE734 /* LaunchScreen.storyboard */,
 			);
 			path = MoodCycle;
+			sourceTree = "<group>";
+		};
+		73D0A11421A5D2F200876AD3 /* Tab Controller Pages */ = {
+			isa = PBXGroup;
+			children = (
+				730B192121A2897A00505422 /* tabController.swift */,
+				738418D72193E120005DDA59 /* AskForTodayMoodCViewController.swift */,
+				738418DD2193E353005DDA59 /* StatsViewController.swift */,
+				730EE2A121A7528A0077C414 /* diaryViewController.swift */,
+			);
+			path = "Tab Controller Pages";
 			sourceTree = "<group>";
 		};
 		73DF064F219D1A2D003BA595 /* Products */ = {
@@ -269,8 +298,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				73A513F3219B471E004D3149 /* GoogleService-Info.plist in Resources */,
+				738E21DB219E1A0500B48414 /* thank you.gif in Resources */,
 				738B74C8218E2612007DE734 /* LaunchScreen.storyboard in Resources */,
+				7309C996219FE4CD00EA3D91 /* GoogleService-Info.plist in Resources */,
 				738B74C5218E2612007DE734 /* Assets.xcassets in Resources */,
 				738B74C3218E260E007DE734 /* Main.storyboard in Resources */,
 			);
@@ -329,15 +359,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				735741CB219A1ACA000773A8 /* SignUpViewController.swift in Sources */,
+				73AD404321AF9B2E00A7A74B /* CustomSlider.swift in Sources */,
 				7354408C2198D18A00F43ADA /* SavedEntryThankYouViewController.swift in Sources */,
-				738418DC2193E342005DDA59 /* CalendarViewController.swift in Sources */,
-				738418E02193E3AD005DDA59 /* MainPageViewController.swift in Sources */,
+				738E21D8219E163500B48414 /* iOSGif.swift in Sources */,
 				738418D82193E120005DDA59 /* AskForTodayMoodCViewController.swift in Sources */,
+				73BE6DE421AC5EF1005C1F98 /* viewEntryViewController.swift in Sources */,
+				730EE2A821A8BC550077C414 /* diaryEntry.swift in Sources */,
 				738B74BE218E260E007DE734 /* AppDelegate.swift in Sources */,
 				738418DE2193E353005DDA59 /* StatsViewController.swift in Sources */,
-				738418DA2193E1A2005DDA59 /* DiaryEntryViewController.swift in Sources */,
+				738418DA2193E1A2005DDA59 /* addDiaryEntryViewController.swift in Sources */,
+				730B192221A2897A00505422 /* tabController.swift in Sources */,
+				730EE2A221A7528A0077C414 /* diaryViewController.swift in Sources */,
+				730EE2A421A754C60077C414 /* diaryEntryCell.swift in Sources */,
 				735741C921996CD0000773A8 /* LogInViewController.swift in Sources */,
-				7354408F2198D6E000F43ADA /* moodCyclyJournalEntries.xcdatamodeld in Sources */,
+				7363338821A2067000F8AD4E /* User.swift in Sources */,
+				73AD404621B026CD00A7A74B /* editEntryViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -500,7 +536,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.thuanphung.MoodCycle1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.thuanphung.MoodCycle2;
 				PRODUCT_MODULE_NAME = "$(PRODUCT_NAME:c99extidentifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -521,7 +557,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.thuanphung.MoodCycle1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.thuanphung.MoodCycle2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -550,19 +586,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		7354408D2198D6E000F43ADA /* moodCyclyJournalEntries.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				7354408E2198D6E000F43ADA /* moodCyclyJournalEntries.xcdatamodel */,
-			);
-			currentVersion = 7354408E2198D6E000F43ADA /* moodCyclyJournalEntries.xcdatamodel */;
-			path = moodCyclyJournalEntries.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = 738B74B2218E260E007DE734 /* Project object */;
 }

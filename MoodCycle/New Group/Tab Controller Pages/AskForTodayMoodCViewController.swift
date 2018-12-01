@@ -19,17 +19,20 @@ class AskForTodayMood: UIViewController, UITextViewDelegate {
     var currentUserRef = User()
 
 
+    @IBOutlet weak var energySlider: UISlider!
+    
+    @IBOutlet weak var addEntryNavbAR: UINavigationBar!
     @IBAction func logOutButtonPressed(_ sender: Any) {
         let firebaseAuth = Auth.auth()
         do {
             try firebaseAuth.signOut()
+            performSegue(withIdentifier: "logOutFromMainSegue", sender: self)
         } catch let signOutError as NSError {
             print ("Error signing out: %@", signOutError)
         }
         
-         performSegue(withIdentifier: "logOutFromMainSegue", sender: self)
+        
     }
-    @IBOutlet weak var dateLabel: UILabel!
     
     
     @IBAction func SaveButton(_ sender: UIButton) {
@@ -83,6 +86,7 @@ class AskForTodayMood: UIViewController, UITextViewDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        addEntryNavbAR.titleTextAttributes = [NSAttributedString.Key.font: UIFont(name: "Avenir Medium", size: 21)!]
         let date = Date()
         let formatter = DateFormatter()
         formatter.dateFormat = "MM/dd/yyyy"
@@ -90,19 +94,28 @@ class AskForTodayMood: UIViewController, UITextViewDelegate {
         let year = Calendar.current.component(.year, from: Date())
         let month = Calendar.current.component(.month, from: Date())
         let day = Calendar.current.component(.day, from: Date())
-        
-        
-        let hour = Calendar.current.component(.hour, from: date)
-        let minute = Calendar.current.component(.minute, from: date)
-        
+
+        let timeFormatter = DateFormatter()
+        timeFormatter.dateFormat = "h:mm a"
+
+        addEntryNavbAR.topItem?.title = result
         
         dbRefCurrentUser = Database.database().reference().child("Users").child((Auth.auth().currentUser?.uid)!)
-        currentDateNode = dbRefCurrentUser.child("\(year)").child(intToMonth(num: month)).child("\(month)-" + "\(day)-" + "\(year)").child("Time: " + "\(hour):\(minute)")
-        dateLabel.text = result
+        currentDateNode = dbRefCurrentUser.child("\(year)").child(intToMonth(num: month)).child("\(month)-" + "\(day)-" + "\(year)").child(timeFormatter.string(from: date))
         currentUserRef.lastEntryRef = currentDateNode
         // Do any additional setup after loading the view.
     }
     
+    @IBAction func logOutPressed(_ sender: Any) {
+        let firebaseAuth = Auth.auth()
+        do {
+            try firebaseAuth.signOut()
+            performSegue(withIdentifier: "addEntryToLogInSegue", sender: self)
+        } catch let signOutError as NSError {
+            print ("Error signing out: %@", signOutError)
+        }
+        
+    }
     func intToMonth(num: Int) -> String {
         if num == 1{
             return "January"

@@ -22,7 +22,7 @@ class LogInViewController: UIViewController, UITextFieldDelegate {
     @IBAction func logInButtonPressed(_ sender: Any) {
         guard let emailText = emailTextField.text else { return }
         guard let passwordText = passwordTextField.text else { return }
-        Auth.auth().signIn(withEmail: userEmail, password: userPassword){ (user, error) in
+        Auth.auth().signIn(withEmail: userEmail, password: passwordTextField.text!){ (user, error) in
             if error == nil{
             self.performSegue(withIdentifier: "logInToAddEntrySegue", sender: self)
             }
