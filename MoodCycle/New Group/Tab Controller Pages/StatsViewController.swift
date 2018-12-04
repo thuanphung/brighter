@@ -35,41 +35,34 @@ class StatsViewController: UIViewController {
     
     @IBOutlet weak var weeklyLineChart: LineChartView!
     
+
     
-    @IBAction func energyButton(_ sender: Any) {
-        if showingEnergy == false {
-            fullChartData.addDataSet(energyLineDataSet)
-            showingEnergy = true
+    @IBAction func changeDisplay(_ sender: UISwitch) {
+        if sender.tag == 1 {
+            if sender.isOn {
+                fullChartData.addDataSet(energyLineDataSet)
+            } else {
+                fullChartData.removeDataSet(energyLineDataSet)
+            }
+        } else if sender.tag == 2 {
+            if sender.isOn {
+                fullChartData.addDataSet(stressLineDataSet)
+            } else {
+                fullChartData.removeDataSet(stressLineDataSet)
+            }
         } else {
-            fullChartData.removeDataSet(energyLineDataSet)
-            showingEnergy = false
+            if sender.isOn {
+                fullChartData.addDataSet(moodLineDataSet)
+            } else {
+                fullChartData.removeDataSet(moodLineDataSet)
+            }
         }
-        weeklyLineChart.notifyDataSetChanged()
-    }
-    
-    
-    @IBAction func stressButton(_ sender: Any) {
-        if showingStress == false {
-            fullChartData.addDataSet(stressLineDataSet)
-            showingStress = true
-        } else {
-            fullChartData.removeDataSet(stressLineDataSet)
-            showingStress = false
-        }
-        weeklyLineChart.notifyDataSetChanged()
-    }
-    
-    @IBAction func moodButton(_ sender: Any) {
-        if showingMood == false {
-            fullChartData.addDataSet(moodLineDataSet)
-            showingMood = true
-        } else {
-            fullChartData.removeDataSet(moodLineDataSet)
-            showingMood = false
-        }
-        weeklyLineChart.notifyDataSetChanged()
         
+        weeklyLineChart.notifyDataSetChanged()
     }
+    
+    
+  
     
     @IBAction func thirtyDayGraphWanted(_ sender: Any) {
 
@@ -111,7 +104,6 @@ class StatsViewController: UIViewController {
             
         })
 
-        weeklyLineChart.xAxis.setLabelCount(15, force: true)
     }
 
     
@@ -150,8 +142,7 @@ class StatsViewController: UIViewController {
             self.fullChartData.addDataSet(self.energyLineDataSet)
             self.showingEnergy = true
             self.weeklyLineChart.data = self.fullChartData
-            
-            
+
         })
         weeklyLineChart.leftAxis.setLabelCount(11, force: true)
 
@@ -173,7 +164,7 @@ class StatsViewController: UIViewController {
     func grabWeeklyData(completionHandler: @escaping () -> Void ) {
 //       creates date array for the last 7 days
         var today = Date()
-        for _ in 1...7{
+        for _ in 1...8{
             let tomorrow = Calendar.current.date(byAdding: .day, value: -1, to: today)
             let date = DateFormatter()
             date.dateFormat = "MM-dd-yyyy"
@@ -184,7 +175,7 @@ class StatsViewController: UIViewController {
         
 //      creates an array of the paths needed to access
         var dataBaseArray = [DatabaseReference]()
-        for i in 0...6{
+        for i in 0...7{
             let currentWorkingDate = lastSevenDaysArray[i]
             let delimiter = "-"
             var token = currentWorkingDate.components(separatedBy: delimiter)
@@ -194,7 +185,7 @@ class StatsViewController: UIViewController {
             dataBaseArray.append(dbRefCurrentUser.child(year).child(month).child(currentWorkingDate))
         }
 //      access every path and averages data if any (if no data, leave blank)
-        for i in 0...6{
+        for i in 0...7{
             dataBaseArray[i].observeSingleEvent(of:.value, with: { (snapshot) in
                 if snapshot.exists() {
                     var mood: Double = 0
@@ -223,14 +214,14 @@ class StatsViewController: UIViewController {
                     
                 }
                 
-                if (self.stressDataPoints.count == 7) {
+                if (self.stressDataPoints.count == 8) {
                     completionHandler()
                     self.weeklyLineChart.notifyDataSetChanged()
                 }
             })
 
         }
-        weeklyLineChart.xAxis.axisMaximum = 8
+        weeklyLineChart.xAxis.axisMaximum = 9
         
     }
     
@@ -299,7 +290,7 @@ class StatsViewController: UIViewController {
     }
     
     func setChartEntry(emptyChartEntry: inout [ChartDataEntry], dateArray: [String], valueArray: [String: Double]) {
-        for i in 1..<dateArray.count {
+        for i in 0..<dateArray.count {
             let values = valueArray[dateArray[i]]
             if values != Double(100) {
                 let value = ChartDataEntry(x: Double(i + 1), y: values!)
@@ -307,7 +298,6 @@ class StatsViewController: UIViewController {
             }
             
         }
-
     }
     
 
@@ -364,6 +354,26 @@ class StatsViewController: UIViewController {
         weeklyLineChart.drawGridBackgroundEnabled = false
         weeklyLineChart.doubleTapToZoomEnabled = false
         
+        let longDays = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+        let shortDays = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"]
+        var offSet = 0
+        
+        var formattedShortDays = [""]
+        
+        let today = Date().dayOfWeek()
+        offSet = (longDays.firstIndex(of: today!))!
+        
+        for i in 0...7 {
+            formattedShortDays.append(shortDays[(i + offSet) % 7])
+        }
+        
+        
+        
+        
+        weeklyLineChart.xAxis.valueFormatter = IndexAxisValueFormatter(values: formattedShortDays)
+        weeklyLineChart.xAxis.granularity = 1
+        weeklyLineChart.xAxis.setLabelCount(10, force: true)
+
         
         // Do any additional setup after loading the view.
     }
@@ -384,3 +394,43 @@ class StatsViewController: UIViewController {
 
 
 
+@objc(LineChartFormatter)
+public class LineChartFormatter: NSObject, IAxisValueFormatter{
+
+        
+        var labels: [String] = []
+        let longDays = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+        let shortDays = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"]
+        var offSet = 0
+
+        
+    public func stringForValue(_ value: Double, axis: AxisBase?) -> String {
+            return labels[(Int(value) + offSet) % shortDays.count ]
+        }
+        
+        init(labels: [String]) {
+            super.init()
+            let today = Date().dayOfWeek()
+            setDays(today: today!)
+            
+            self.labels = labels
+        }
+        
+        func setDays(today: String) {
+            offSet = (longDays.firstIndex(of: today))!
+            
+        }
+    
+    
+
+}
+
+
+extension Date {
+    func dayOfWeek() -> String? {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "EEEE"
+        return dateFormatter.string(from: self).capitalized
+        // or use capitalized(with: locale) if you want
+    }
+}

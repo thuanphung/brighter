@@ -20,10 +20,12 @@ class SavedEntryThankYouViewController: UIViewController {
     
     @IBOutlet weak var numberOfEntryLabel: UILabel!
     
-    func getStreak() {
-    }
+  
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "Almost.jpg")!)
+
+        
         dbRefCurrentUser = Database.database().reference().child("Users").child((Auth.auth().currentUser?.uid)!)
 
         let dbStreak = self.dbRefCurrentUser.child("Streak")

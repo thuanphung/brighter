@@ -82,27 +82,40 @@ class AskForTodayMood: UIViewController, UITextViewDelegate {
         }
     }
     
-   
+    override func viewDidAppear(_ animated: Bool) {
+        let date = Date()
+        let formatter = DateFormatter()
+        let year = Calendar.current.component(.year, from: Date())
+        let month = Calendar.current.component(.month, from: Date())
+        let day = Calendar.current.component(.day, from: Date())
+        
+        let dates = DateFormatter()
+        dates.dateFormat = "MM-dd-yyyy"
+        let stringDate : String = dates.string(from: date)
+        
+        
+        let timeFormatter = DateFormatter()
+        timeFormatter.dateFormat = "h:mm a"
+        dbRefCurrentUser = Database.database().reference().child("Users").child((Auth.auth().currentUser?.uid)!)
+        currentDateNode = dbRefCurrentUser.child("\(year)").child(intToMonth(num: month)).child(stringDate).child(timeFormatter.string(from: date))
+        currentUserRef.lastEntryRef = currentDateNode
+    }
     
+ 
     override func viewDidLoad() {
         super.viewDidLoad()
+
         addEntryNavbAR.titleTextAttributes = [NSAttributedString.Key.font: UIFont(name: "Avenir Medium", size: 21)!]
         let date = Date()
         let formatter = DateFormatter()
         formatter.dateFormat = "MM/dd/yyyy"
         let result = formatter.string(from: date)
-        let year = Calendar.current.component(.year, from: Date())
-        let month = Calendar.current.component(.month, from: Date())
-        let day = Calendar.current.component(.day, from: Date())
-
-        let timeFormatter = DateFormatter()
-        timeFormatter.dateFormat = "h:mm a"
+        
 
         addEntryNavbAR.topItem?.title = result
         
-        dbRefCurrentUser = Database.database().reference().child("Users").child((Auth.auth().currentUser?.uid)!)
-        currentDateNode = dbRefCurrentUser.child("\(year)").child(intToMonth(num: month)).child("\(month)-" + "\(day)-" + "\(year)").child(timeFormatter.string(from: date))
-        currentUserRef.lastEntryRef = currentDateNode
+        
+        
         // Do any additional setup after loading the view.
     }
     

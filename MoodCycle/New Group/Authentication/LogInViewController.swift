@@ -74,6 +74,7 @@ class LogInViewController: UIViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "Anamnisar.jpg")!)
         dbRef = Database.database().reference()
         self.emailTextField.delegate = self
         self.passwordTextField.delegate = self

@@ -37,7 +37,7 @@ class diaryViewController: UITableViewController {
                                     if let trueEntry = entry {
                                         let newEntry = diaryEntry(title: trueEntry["Title"]!, body: trueEntry["Body"]!, date:  trueEntry["Date"]!, time: entryTime, databaseRef: trueEntry["dbRef"] ?? "peace")
                                         self.entries.append(newEntry)
-                                        self.entries.sort(by: { $0.time < $1.time })
+                                        self.entries.sort(by: { $0.time > $1.time })
                                         self.entries.sort(by: { $0.date > $1.date })
                                         self.tableView.reloadData()
                                         
@@ -55,6 +55,7 @@ class diaryViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+
         self.tableView.delegate = self
         self.tableView.dataSource = self
         

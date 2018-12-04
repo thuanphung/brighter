@@ -51,7 +51,7 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
                         }
                     }
                     self.dbRef.child("Users").child((Auth.auth().currentUser?.uid)!).child("Account Info").setValue(["Name": self.userFirstName + self.userLastName, "Email": self.userEmail, "Password": self.userPassword])
-                    self.dbRef.child("Users").child((Auth.auth().currentUser?.uid)!).child("Streak").setValue(0)
+                    self.dbRef.child("Users").child((Auth.auth().currentUser?.uid)!).child("Streak").setValue(1)
                     let alert = UIAlertController(title: "Account Successfully Created", message: "Thank you for signing up!", preferredStyle: .alert)
                     alert.addAction(UIAlertAction(title: "Continue", style: .default, handler: {
                         (action: UIAlertAction) in
@@ -112,8 +112,14 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
             }
     }
     
+    @IBAction func backButton(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+        
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "Anamnisar.jpg")!)
+
         dbRef = Database.database().reference()
         self.firstNameTextField.delegate = self
         self.lastNameTextField.delegate = self
