@@ -364,7 +364,7 @@
                                         <rect key="frame" x="0.0" y="414.33333333333337" width="293" height="60.333333333333314"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BCI-ov-ZcS">
-                                                <rect key="frame" x="0.0" y="0.0" width="118.33333333333333" height="60.333333333333336"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="98.666666666666671" height="60.333333333333336"/>
                                                 <color key="backgroundColor" red="0.83741801979999997" green="0.83743780850000005" blue="0.83742713930000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="13"/>
                                                 <state key="normal" title="Forgot Password">
@@ -377,7 +377,7 @@
                                                 </userDefinedRuntimeAttributes>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0xe-dM-7HD">
-                                                <rect key="frame" x="225.33333333333329" y="0.0" width="67.666666666666657" height="60.333333333333336"/>
+                                                <rect key="frame" x="205.66666666666666" y="0.0" width="87.333333333333343" height="60.333333333333336"/>
                                                 <color key="backgroundColor" red="0.83741801979999997" green="0.83743780850000005" blue="0.83742713930000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="13"/>
                                                 <state key="normal" title="Register">
@@ -395,7 +395,7 @@
                                         </subviews>
                                         <constraints>
                                             <constraint firstItem="0xe-dM-7HD" firstAttribute="width" secondItem="JTx-bo-4Oq" secondAttribute="width" multiplier="2/7" constant="1" id="2ZI-Ap-mL9"/>
-                                            <constraint firstItem="BCI-ov-ZcS" firstAttribute="width" secondItem="JTx-bo-4Oq" secondAttribute="width" multiplier="2/5" constant="1" id="qUN-VT-9SR"/>
+                                            <constraint firstItem="BCI-ov-ZcS" firstAttribute="width" secondItem="JTx-bo-4Oq" secondAttribute="width" multiplier="2/6" constant="1" id="qUN-VT-9SR"/>
                                         </constraints>
                                     </stackView>
                                 </subviews>
@@ -682,7 +682,6 @@
                                         <subviews>
                                             <switch opaque="NO" tag="1" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kFA-Di-x8P">
                                                 <rect key="frame" x="0.0" y="0.0" width="69" height="31"/>
-                                                <color key="tintColor" red="0.71875584130000003" green="0.86348837609999995" blue="0.81568306680000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <color key="onTintColor" red="0.71875584130000003" green="0.86348837609999995" blue="0.81568306680000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <connections>
                                                     <action selector="changeDisplay:" destination="8pQ-fN-Id6" eventType="valueChanged" id="MGV-qn-El4"/>
@@ -1012,7 +1011,6 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="jXV-of-Pvn" firstAttribute="centerX" secondItem="rrb-aI-SZu" secondAttribute="centerX" id="A31-3l-Rkw"/>
-                            <constraint firstItem="jXV-of-Pvn" firstAttribute="top" secondItem="rrb-aI-SZu" secondAttribute="top" id="T2G-yA-PCe"/>
                             <constraint firstItem="sZk-XI-ixH" firstAttribute="top" secondItem="jXV-of-Pvn" secondAttribute="bottom" id="chZ-af-8BK"/>
                             <constraint firstItem="jXV-of-Pvn" firstAttribute="centerY" secondItem="rrb-aI-SZu" secondAttribute="centerY" id="eAx-Ps-Gte"/>
                             <constraint firstItem="jXV-of-Pvn" firstAttribute="width" secondItem="rrb-aI-SZu" secondAttribute="width" id="hWu-K6-D13"/>
@@ -1064,7 +1062,7 @@
         <image name="yawn" width="102.40000152587891" height="102.40000152587891"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="vIW-z5-giI"/>
+        <segue reference="r13-pe-DJT"/>
         <segue reference="TYd-Ye-gx5"/>
         <segue reference="dFf-N6-bIW"/>
     </inferredMetricsTieBreakers>
