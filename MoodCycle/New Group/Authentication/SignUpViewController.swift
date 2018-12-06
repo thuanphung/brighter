@@ -119,7 +119,7 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor(patternImage: UIImage(named: "Anamnisar.jpg")!)
-
+        self.hideKeyboardWhenTappedAround() 
         dbRef = Database.database().reference()
         self.firstNameTextField.delegate = self
         self.lastNameTextField.delegate = self

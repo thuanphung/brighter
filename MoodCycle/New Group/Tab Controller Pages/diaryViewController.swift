@@ -37,7 +37,26 @@ class diaryViewController: UITableViewController {
                                     if let trueEntry = entry {
                                         let newEntry = diaryEntry(title: trueEntry["Title"]!, body: trueEntry["Body"]!, date:  trueEntry["Date"]!, time: entryTime, databaseRef: trueEntry["dbRef"] ?? "peace")
                                         self.entries.append(newEntry)
-                                        self.entries.sort(by: { $0.time > $1.time })
+                                        
+                                        self.entries.sort( by: {
+                                            let time0 = $0.time
+                                            let time1 = $1.time
+                                            let dateFormatter = DateFormatter()
+                                            dateFormatter.dateFormat = "h:mm a"
+                                            
+                                            let date0 = dateFormatter.date(from: time0)
+                                            let date1 = dateFormatter.date(from: time1)
+                                            dateFormatter.dateFormat = "HH:mm"
+                                            
+                                            let Date24Zero = dateFormatter.string(from: date0!)
+                                            let Date24First = dateFormatter.string(from: date1!)
+                                            
+                                            return Date24Zero > Date24First
+                                            
+                                            
+                                        })
+                                        
+//                                        self.entries.sort(by: { $0.time > $1.time})
                                         self.entries.sort(by: { $0.date > $1.date })
                                         self.tableView.reloadData()
                                         

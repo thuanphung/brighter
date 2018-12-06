@@ -84,10 +84,8 @@ class AskForTodayMood: UIViewController, UITextViewDelegate {
     
     override func viewDidAppear(_ animated: Bool) {
         let date = Date()
-        let formatter = DateFormatter()
         let year = Calendar.current.component(.year, from: Date())
         let month = Calendar.current.component(.month, from: Date())
-        let day = Calendar.current.component(.day, from: Date())
         
         let dates = DateFormatter()
         dates.dateFormat = "MM-dd-yyyy"
