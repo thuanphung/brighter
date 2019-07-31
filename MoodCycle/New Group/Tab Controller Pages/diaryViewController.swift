@@ -26,9 +26,9 @@ class diaryViewController: UITableViewController {
                 for (key, value) in yearSnap {
                     if key != "Account Info" && key != "Streak" {
                         let monthSnap = value as! [String: AnyObject]
-                        for (month, date) in monthSnap {
+                        for (_, date) in monthSnap {
                             let dates = date as! [String: AnyObject]
-                            for (date, times) in dates{
+                            for (_, times) in dates{
                                 let timeSnaps = times as! [String: AnyObject]
                                 for (time, data) in timeSnaps {
                                     let entryTime = time
@@ -37,10 +37,16 @@ class diaryViewController: UITableViewController {
                                     if let trueEntry = entry {
                                         let newEntry = diaryEntry(title: trueEntry["Title"]!, body: trueEntry["Body"]!, date:  trueEntry["Date"]!, time: entryTime, databaseRef: trueEntry["dbRef"] ?? "peace")
                                         self.entries.append(newEntry)
-                                        
                                         self.entries.sort( by: {
                                             let time0 = $0.time
                                             let time1 = $1.time
+                                            let date0 = $0.date
+                                            let date1 = $1.date
+                                            
+                                            if date0 != date1 {
+                                                return $0.date > $1.date
+                                            } else {
+                                            
                                             let dateFormatter = DateFormatter()
                                             dateFormatter.dateFormat = "h:mm a"
                                             
@@ -51,13 +57,14 @@ class diaryViewController: UITableViewController {
                                             let Date24Zero = dateFormatter.string(from: date0!)
                                             let Date24First = dateFormatter.string(from: date1!)
                                             
+                                            
                                             return Date24Zero > Date24First
+                                            }
                                             
                                             
                                         })
                                         
-//                                        self.entries.sort(by: { $0.time > $1.time})
-                                        self.entries.sort(by: { $0.date > $1.date })
+                                        
                                         self.tableView.reloadData()
                                         
                                     }

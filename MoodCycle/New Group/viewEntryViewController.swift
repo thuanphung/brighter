@@ -27,17 +27,12 @@ class viewEntryViewController: UIViewController {
                 self.titleOfEntryTextField.text = entryVals["Title"]
                 self.bodyOfEntryTextView.text = entryVals["Body"]
                 self.titleOfEntryTextField.isUserInteractionEnabled = false
-                self.bodyOfEntryTextView.isUserInteractionEnabled = false
+                self.bodyOfEntryTextView.isUserInteractionEnabled = true
             }
         })
         
         
-//        titleOfEntryTextField.text = entryToView!.title
-//        bodyOfEntryTextView.text = entryToView!.body
-//        titleOfEntryTextField.isUserInteractionEnabled = false
-//        bodyOfEntryTextView.isUserInteractionEnabled = false
-//
-        
+
 
         // Do any additional setup after loading the view.
     }

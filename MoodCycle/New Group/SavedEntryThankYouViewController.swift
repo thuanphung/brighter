@@ -32,14 +32,20 @@ class SavedEntryThankYouViewController: UIViewController {
         dbStreak.observeSingleEvent(of:.value, with: { (snapshot) in
             if snapshot.exists() {
                 let currStreak = snapshot.value as! Int
-                self.numberOfEntryLabel.text = "\(currStreak) entries"
+                if currStreak == 1 {
+                    self.numberOfEntryLabel.text = "\(currStreak) entry"
+                } else {
+                    self.numberOfEntryLabel.text = "\(currStreak) entries"
+                }
+                
+                
                 
             } else {
                 print("snapshot doesn't exist")
             }
         })
 
-        let gifURL : String = "https://media.giphy.com/media/11sBLVxNs7v6WA/giphy.gif"
+        let _ : String = "https://media.giphy.com/media/11sBLVxNs7v6WA/giphy.gif"
         gifImage.loadGif(name: "thank you")
         
     

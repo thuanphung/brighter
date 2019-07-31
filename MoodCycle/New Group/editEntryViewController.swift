@@ -18,9 +18,7 @@ class editEntryViewController: UIViewController, UITextViewDelegate, UITextField
     var result: String = ""
     
     @IBOutlet weak var titleOfEntry: UITextField!
-    @IBAction func backButtonPressed(_ sender: Any) {
-//        performSegue(withIdentifier: "T##String", sender: <#T##Any?#>)
-    }
+
     @IBOutlet weak var diaryNavBar: UINavigationBar!
     
     @IBAction func saveButtonPressed(_ sender: Any) {
@@ -39,6 +37,9 @@ class editEntryViewController: UIViewController, UITextViewDelegate, UITextField
         self.dismiss(animated: true, completion: nil)
     }
     
+    @IBAction func backButtonPressed(_ sender: Any) {
+        self.dismiss(animated: false, completion: nil)
+    }
     
     
     @IBOutlet weak var entryBody: UITextView!
@@ -84,7 +85,7 @@ class editEntryViewController: UIViewController, UITextViewDelegate, UITextField
     func updateTextView(notification: Notification) {
         let userInfo = notification.userInfo!
         let keyboardEndFrameScreenCoordinates = (userInfo[UIResponder.keyboardFrameEndUserInfoKey] as! NSValue).cgRectValue
-        let keyboardEndFrame = self.view.convert(keyboardEndFrameScreenCoordinates, to: view.window)
+        _ = self.view.convert(keyboardEndFrameScreenCoordinates, to: view.window)
         
         if notification.name == UIResponder.keyboardWillHideNotification {
             entryBody.contentInset = UIEdgeInsets.zero
